@@ -14,17 +14,17 @@ def main():
     classifier = Sequential()
     
     # Step 1 - Convolutio Layer 
-    classifier.add(Convolution2D(32, 1,  1, input_shape = (64, 64, 3), activation = 'relu'))
+    classifier.add(Convolution2D(32, 3,  3, input_shape = (64, 64, 3), activation = 'relu'))
     
     #step 2 - Pooling
     classifier.add(MaxPooling2D(pool_size =(2,2)))
     
     # Adding second convolution layer
-    classifier.add(Convolution2D(32, 1,  1, activation = 'relu'))
+    classifier.add(Convolution2D(32, 3,  3, activation = 'relu'))
     classifier.add(MaxPooling2D(pool_size =(2,2)))
     
     #Adding 3rd Concolution Layer
-    classifier.add(Convolution2D(64, 1,  1, activation = 'relu'))
+    classifier.add(Convolution2D(64, 3,  3, activation = 'relu'))
     classifier.add(MaxPooling2D(pool_size =(2,2)))
     
     
